@@ -38,6 +38,29 @@ main{
     flex: 1;
 }
 
+.container{
+    display: flex;
+}
+
+.hostProfile{
+    flex: 1;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hostDetails{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 footer{
     text-align: center;
     padding: 20px;
@@ -50,5 +73,26 @@ footer{
         gap: 20px;
         padding: 12px 20px;
         margin: 15px auto;
+    }
+
+    .container{
+        display: block;
+        height: auto;
+    }
+
+    .hostProfile{
+        position: relative;
+        height: auto;
+    }
+
+    .hostDetails{
+        height: auto;
+        overflow: visible;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem 1rem;
+        gap: 2rem;
     }
 }

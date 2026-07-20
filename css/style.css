@@ -43,9 +43,12 @@ main{
 }
 
 .hostProfile{
-    flex: 1;
-    position: sticky;
+    position: fixed;
+    left: 0;
     top: 0;
+
+    width: 50%;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -53,7 +56,8 @@ main{
 }
 
 .hostDetails{
-    flex: 1;
+    width: 50%;
+    margin-left: 50%;
 
     display: flex;
     flex-direction: column;
@@ -81,18 +85,16 @@ footer{
     }
 
     .hostProfile{
-        position: relative;
+        position: static;
+        width: 100%;
         height: auto;
     }
 
     .hostDetails{
-        height: auto;
-        overflow: visible;
-
-        display: flex;
-        flex-direction: column;
-
-        padding: 2rem 1rem;
+        width: 100%;
+        margin-left: 0;
+        
+        padding: 2rem 0rem;
         gap: 2rem;
     }
 }

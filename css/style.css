@@ -4,6 +4,14 @@
     --accent: #936812;
     --accent-secondary: #e9b44c;
 
+    --button-default: #F2B33D;
+    --button-hover: #FFC857;
+    --button-down: #D9961A;
+
+    --text-default: #24140D;
+    --text-hover: #24140D;
+    --text-down: #F9EFD8;
+
     --content-width: 1200px;
     --card-width: 800px;
 }
@@ -319,6 +327,27 @@ main {
     overflow-y: auto;
 
     box-sizing: border-box;
+}
+
+.default-button{
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    border: 1px solid var(--text);
+    border-radius: 8px;
+
+    color: var(--text-default);
+    background: var(--button-default);
+}
+
+.default-button:hover{
+    background: var(--button-hover);
+    color: var(--text-hover);
+}
+
+.default-button:active{
+    background: var(--button-down);
+    color: var(--text-down);
 }
 
 footer {

@@ -1,19 +1,19 @@
 :root {
-    --bg: #1c110a;
-    --text: #e4d6a7;
-    --accent: #936812;
-    --accent-secondary: #e9b44c;
+    --bg: #2f462f;
+    --text: #fbf9f5;
+    --accent: #828f49;
+    --accent-secondary: #fbe08c;
 
-    --button-default: #F2B33D;
-    --button-hover: #FFC857;
-    --button-down: #D9961A;
+    --button-default: #31572c;
+    --button-hover: #4f772d;
+    --button-down: #90a955;
 
-    --text-default: #24140D;
-    --text-hover: #24140D;
+    --text-default: #F9EFD8;
+    --text-hover: #F9EFD8;
     --text-down: #F9EFD8;
 
-    --content-width: 1200px;
-    --card-width: 800px;
+    --panel-width: 1200px;
+    --content-width: 800px;
 }
 
 *,
@@ -43,22 +43,26 @@ main {
     justify-content: center;
     gap: 40px;
 
-    margin: 40px auto;
+    margin: 16px auto 40px auto;
     padding: 18px 35px;
 
     background: var(--accent);
     border-radius: 20px;
 }
 
-.navbar a {
-    color: var(--text);
-    text-decoration: none;
-    font-size: 18px;
+.navbar a{
+    color:var(--text);
+    font-size:24px;
 
-    transition: color .3s;
+    transition: .3s;
 }
 
-.navbar a:hover {
+.navbar a:hover{
+    transform:translateY(-2px);
+    color:var(--accent-secondary);
+}
+
+.navbar a:active {
     color: var(--bg);
 }
 
@@ -67,20 +71,22 @@ main {
 }
 
 .leftPanel {
-    position: sticky;
-    top: 0;
-
     width: 50%;
-    height: 100vh;
+}
+
+.leftContent {
+    position: sticky;
+    top: 40px;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 .rightPanel {
     width: 50%;
-    padding: 40px 0;
+    position: relative;
+    top: 40px;
 
     display: flex;
     flex-direction: column;
@@ -89,11 +95,10 @@ main {
 
 .hostCard {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;
 
     width: min(700px, 90%);
-    margin: 20px 0;
     padding: 20px;
 
     background: var(--accent);
@@ -119,27 +124,76 @@ main {
 }
 
 .hostInfo {
-    flex: 1;
     color: var(--text);
 }
 
 .hostInfo h2 {
-    margin: 0 0 15px;
     font-size: 24px;
 }
 
 .hostInfo p {
-    margin: 8px 0;
-
     font-size: 18px;
+    line-height: 1.5;
+}
+
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    
+}
+
+.techStack span {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.2s ease;
+}
+
+.techStack span:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.extraStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+    color: var(--text-default);
+}
+
+.extraStack a{
+    color: var(--text);
+}
+
+.extraStack a:hover {
+    color: var(--accent-secondary);
+}
+
+.extraStack a:active {
+    color: var(--bg);
+}
+
+.whoami-description{
+    width: 100%;
+    max-width: var(--content-width);
+    text-align: left;
+
+    color: var(--text);
+    font-size: 1.3rem;
     line-height: 1.5;
 }
 
 .section {
     width: 100%;
-    max-width: var(--content-width);
+    max-width: var(--panel-width);
 
-    margin: 0 auto;
     padding: 10px 40px;
 }
 
@@ -152,7 +206,7 @@ main {
     font-size: clamp(46px, 10vw, 80px);
     font-weight: 900;
     line-height: .8;
-    letter-spacing: -6px;
+    letter-spacing: -5px;
     text-transform: uppercase;
 }
 
@@ -165,12 +219,12 @@ main {
 }
 
 .section-body {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .experience-card {
-    max-width: var(--card-width);
-    margin-bottom: 50px;
+    max-width: var(--content-width);
+    margin-bottom: 30px;
 }
 
 .experience-title {
@@ -180,7 +234,7 @@ main {
 }
 
 .experience-description {
-    margin: 0 0 35px;
+    margin: 0 0 20px;
 
     color: var(--text);
     font-size: 1.3rem;
@@ -202,15 +256,15 @@ main {
     gap: 24px;
 
     width: 100%;
-    max-width: var(--card-width);
+    max-width: var(--content-width);
 
     margin-bottom: 20px;
     padding: 24px;
 
-    color: var(--text);
+    color: var(--text-default);
     text-decoration: none;
 
-    background: var(--accent);
+    background: var(--button-default);
     border-radius: 20px;
 
     cursor: pointer;
@@ -218,9 +272,14 @@ main {
 }
 
 .project-card:hover {
-    background: var(--accent-secondary);
-    color: var(--bg);
+    background: var(--button-hover);
+    color: var(--text-hover);
     transform: translateY(-4px);
+}
+
+.project-card:active {
+    background: var(--button-down);
+    color: var(--text-down);
 }
 
 .project-image {
@@ -268,9 +327,10 @@ main {
 
 .contact-form{
     width: 100%;
-    max-width: var(--card-width);
-    height: auto;
+    max-width: var(--content-width);
     background: var(--accent);
+
+    margin-bottom: 30px;
     padding: 20px;
     border-radius: 20px;
 }
@@ -278,6 +338,7 @@ main {
 .field-frame{
     display: flex;
     flex-direction: column;
+    margin: 0px 0px 12px 0px;
     width: 100%;
 }
 
@@ -285,28 +346,28 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
+    height: auto;
     gap: 16px;
 }
 
 .field-title {
     width: 100%;
-    margin-bottom: 10px;
     font-size: 1.2rem;
+    margin: 0px 0px 10px 0px;
     color: var(--text);
 }
 
 .field-input {
-    width: 100%;
-    padding: 12px;
+    width:100%;
+    padding:12px;
 
-    background: var(--bg);
-    color: var(--text);
-    font: inherit;
+    background:var(--bg);
+    color:var(--text);
+    font:inherit;
 
-    border: 1px solid var(--text);
-    border-radius: 8px;
-
-    resize: none;
+    border:none;
+    border-radius:8px;
+    outline:none;
 }
 
 .big-field-input {
@@ -317,7 +378,7 @@ main {
     background: var(--bg);
     color: var(--text);
 
-    border: 1px solid var(--text);
+    border: 0px;
     border-radius: 8px;
 
     font: inherit;
@@ -329,28 +390,46 @@ main {
     box-sizing: border-box;
 }
 
+.field-input:focus,
+.big-field-input:focus{
+    outline:2px solid var(--accent-secondary);
+}
+
 .default-button{
     width: 100%;
-    margin-top: 24px;
     padding: 12px;
-    border: 1px solid var(--text);
+    border: 0px;
     border-radius: 8px;
+
+    font-weight: bold;
+    letter-spacing: 1px;
 
     color: var(--text-default);
     background: var(--button-default);
+
+    transition: transform .2s ease,
+                background-color .2s ease,
+                box-shadow .2s ease;
 }
 
 .default-button:hover{
     background: var(--button-hover);
     color: var(--text-hover);
+
+    transform: scale(1.01);
 }
 
 .default-button:active{
     background: var(--button-down);
     color: var(--text-down);
+
+    transform: scale(0.99);
 }
 
 footer {
+    position: relative;
+    top: 40px;
+
     padding: 20px;
 
     color: var(--text);
@@ -361,10 +440,14 @@ footer {
 
 @media (max-width: 768px) {
 
-    .navbar {
-        gap: 12px;
+    body{
+        margin-top: auto;
+    }
 
-        margin: 24px 19px 14px;
+    .navbar {
+        gap: 32px;
+
+        margin: 24px auto 24px;
         padding: 12px 20px;
     }
 
@@ -387,9 +470,10 @@ footer {
 
     .hostCard {
         flex-direction: column;
-        gap: 20px;
+        gap: 0px;
 
         text-align: center;
+        align-items: center;
     }
 
     .hostInfo h2 {
@@ -398,6 +482,22 @@ footer {
 
     .hostInfo p {
         margin: 6px 0;
+    }
+
+    .techStack {
+        justify-content: center;
+    }
+
+    .extraStack {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .whoami-description {
+        text-align: center;
+
+        padding: 0px 30px;
+        font-size: 1.2rem;
     }
 
     .section {
@@ -411,6 +511,7 @@ footer {
     .section-header h2 {
         gap: 4px;
         text-align: center;
+        letter-spacing: -2px;
     }
 
     .experience-card h2,
@@ -447,6 +548,7 @@ footer {
     }
 
     .horizontal-stack{
-    flex-direction: column;
-}
+        flex-direction: column;
+        gap: 0px;
+    }
 }

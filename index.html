@@ -3,32 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>My Website</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Experience</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </nav>
-
     <main class="content">
         <div class="leftPanel">
+            <div class="leftContent">
+                <nav class="navbar">
+                <a href="#whoami">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="#experience">
+                    <i class="fa-solid fa-briefcase"></i>
+                </a>
+                <a href="#projects">
+                    <i class="fa-solid fa-code"></i>
+                </a>
+                <a href="#contact">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </nav>
             <div class="hostCard">
                 <div class="hostImage">
-                    <image src="img/profile.jpeg" alt="Profile Picture">
+                    <img src="img/profile.jpeg" alt="Profile Picture">
                 </div>
                 <div class="hostInfo">
                     <h2>Luis Carlos León Delgado</h2>
                     <p>Software Engineer specialiced in Tooling, UI/UX and Game Development</p>
+                    <div class="techStack">
+                        <span>C#</span>
+                        <span>C++</span>
+                        <span>WPF</span>
+                        <span>Unity</span>
+                        <span>.NET 4.8</span>
+                        <span>Git</span>
+                        <span>NoesisGUI</span>
+                    </div>
+                    <div class="extraStack">
+                        <a href="/assets/Luis Carlos León Delgado - EN.pdf" target="_blank">Download CV</a>
+                        <a href="https://www.linkedin.com/in/luisnocomunica/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="#contact">Contact</a>
+                    </div>
                 </div>  
+            </div>
             </div>
         </div>
         <div class="rightPanel">
+            <section id="whoami" class="section">
+                <div class="section-header">
+                    <h2>
+                        <span class="title-primary">HELLO</span>
+                        <span class="title-secondary">WORLD!</span>
+                    </h2>
+                </div>
+                <div class="section-body">
+                    <p class="whoami-description">
+                        My professional career as a software developer began in 2023, although my journey with programming started much earlier. In 2015, I began teaching myself to code, driven by my passion for computers and video games. It was during that time that I discovered what would eventually become my profession: solving problems through software development.<br><br>
+                        Thanks to an opportunity and a vote of confidence, I landed my first role as a Unity tools developer. A year later, in 2024, I took the next step in my career by specializing in UI/UX development. During this stage, I not only worked on user interfaces for video games but also continued developing internal tools and participated in application porting, an experience that sparked my interest in C++, a language I continue to deepen my knowledge of today.
+                    </p>
+                </div>
+            </section>
 
-            <section class="section">
+            <section id="experience" class="section">
                 <div class="section-header">
                     <h2>
                         <span class="title-primary">PROFESIONAL</span>
@@ -59,7 +97,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section id="projects" class="section">
                 <div class="section-header">
                     <h2>
                         <span class="title-primary">RECENT</span>
@@ -67,7 +105,7 @@
                     </h2>
                 </div>
                 <div class="section-body">
-                    <a href="#" class="project-card">
+                    <a href="https://luisnocomunica.itch.io/jeremys-underpaid-employment" target="_blank" rel="noopener noreferrer" class="project-card">
                         <img src="img/jeremys.png" class="project-image">
 
                         <div class="project-info">
@@ -77,12 +115,12 @@
 
                         <span class="project-link">↗</span>
                     </a>
-                    <a href="#" class="project-card">
+                    <a href="https://brushbolt.com/" target="_blank" rel="noopener noreferrer" class="project-card">
                         <img src="img/uisample.png" class="project-image">
 
                         <div class="project-info">
                             <h2 class="project-title">Brushbolt UI Samples</h2>
-                            <p class="project-subtitle">Projects I worked on during my time at Brushbot.</p>
+                            <p class="project-subtitle">Projects were I worked on during my time at Brushbot.</p>
                         </div>
 
                         <span class="project-link">↗</span>
@@ -90,7 +128,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section id="contact" class="section">
                 <div class="section-header">
                     <h2>
                         <span class="title-primary">LET'S WORK</span>
@@ -98,27 +136,53 @@
                     </h2>
                 </div>
                 <div class="section-body">
-                    <div class="contact-form">
+                    <form id="contactForm" class="contact-form">
                         <div class="horizontal-stack">
+
                             <label class="field-frame">
                                 <h3 class="field-title">Name</h3>
-                                <textarea class="field-input" placeholder="Jhon Doe"></textarea>
+                                <input
+                                    class="field-input"
+                                    type="text"
+                                    name="name"
+                                    placeholder="John Doe"
+                                    required>
                             </label>
+
                             <label class="field-frame">
                                 <h3 class="field-title">Company Name</h3>
-                                <textarea class="field-input" placeholder="Google"></textarea>
+                                <input
+                                    class="field-input"
+                                    type="text"
+                                    name="company"
+                                    placeholder="Google">
                             </label>
+
                         </div>
+
                         <label class="field-frame">
                             <h3 class="field-title">Email</h3>
-                            <textarea class="field-input" placeholder="your.email@example.com"></textarea>
+                            <input
+                                class="field-input"
+                                type="email"
+                                name="email"
+                                placeholder="your.email@example.com"
+                                required>
                         </label>
+
                         <label class="field-frame">
                             <h3 class="field-title">Message</h3>
-                            <textarea class="big-field-input" placeholder="Message"></textarea>
+                            <textarea
+                                class="big-field-input"
+                                name="message"
+                                placeholder="Tell me about your project..."
+                                required></textarea>
                         </label>
-                        <button class="default-button">Submit</button>
-                    </div>
+
+                        <button type="submit" class="default-button">
+                            Submit
+                        </button>
+                    </form>
                 </div>
             </section>
 
@@ -126,8 +190,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <p>Developed by Luis Carlos León Delgado - Freelance Software Developer Services</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,16 +1,16 @@
 :root {
-    --bg: #2f462f;
+    --bg: #111827;
     --text: #fbf9f5;
-    --accent: #828f49;
-    --accent-secondary: #fbe08c;
+    --accent: #1F2937;
+    --accent-secondary: #8b9dbb;
 
-    --button-default: #31572c;
-    --button-hover: #4f772d;
-    --button-down: #90a955;
+    --button-default: #1F2937;
+    --button-hover: #1d4a92;
+    --button-down: #5572a9;
 
-    --text-default: #F9EFD8;
-    --text-hover: #F9EFD8;
-    --text-down: #F9EFD8;
+    --text-default: #F9FAFB;
+    --text-hover: #F9FAFB;
+    --text-down: #F9FAFB;
 
     --panel-width: 1200px;
     --content-width: 800px;
@@ -405,7 +405,7 @@ main {
     letter-spacing: 1px;
 
     color: var(--text-default);
-    background: var(--button-default);
+    background: var(--button-hover);
 
     transition: transform .2s ease,
                 background-color .2s ease,
@@ -413,7 +413,7 @@ main {
 }
 
 .default-button:hover{
-    background: var(--button-hover);
+    background: var(--accent-secondary);
     color: var(--text-hover);
 
     transform: scale(1.01);

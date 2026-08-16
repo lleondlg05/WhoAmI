@@ -1,16 +1,16 @@
 :root {
     --bg: #0d0d0f;
---text: #f5f5f5;
---accent: #1a1a1d;
---accent-secondary: #7c7c81;
+    --text: #f5f5f5;
+    --accent: #1a1a1d;
+    --accent-secondary: #7c7c81;
 
---button-default: #1a1a1d;
---button-hover: #2a2a2e;
---button-down: #3a3a3f;
+    --button-default: #1a1a1d;
+    --button-hover: #2a2a2e;
+    --button-down: #3a3a3f;
 
---text-default: #f5f5f5;
---text-hover: #f5f5f5;
---text-down: #f5f5f5;
+    --text-default: #f5f5f5;
+    --text-hover: #f5f5f5;
+    --text-down: #f5f5f5;
 
     --panel-width: 1200px;
     --content-width: 800px;

@@ -1,16 +1,16 @@
 :root {
-    --bg: #111827;
-    --text: #fbf9f5;
-    --accent: #1F2937;
-    --accent-secondary: #8b9dbb;
+    --bg: #0d0d0f;
+--text: #f5f5f5;
+--accent: #1a1a1d;
+--accent-secondary: #7c7c81;
 
-    --button-default: #1F2937;
-    --button-hover: #1d4a92;
-    --button-down: #5572a9;
+--button-default: #1a1a1d;
+--button-hover: #2a2a2e;
+--button-down: #3a3a3f;
 
-    --text-default: #F9FAFB;
-    --text-hover: #F9FAFB;
-    --text-down: #F9FAFB;
+--text-default: #f5f5f5;
+--text-hover: #f5f5f5;
+--text-down: #f5f5f5;
 
     --panel-width: 1200px;
     --content-width: 800px;
